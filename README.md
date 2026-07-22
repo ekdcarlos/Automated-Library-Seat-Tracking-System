@@ -22,32 +22,14 @@ Database	SQLite (via Flask-SQLAlchemy)
 Frontend	HTML, CSS, JavaScript
 Charts	Chart.js
 HTTP Client	Requests library (for simulation)
-Project Structure
-text
-DeKUT_Library_Tracker/
-│
-├── app.py                  # Flask application
-├── sensors.py              # Sensor simulation script
-├── requirements.txt        # Python dependencies
-│
-├── templates/
-│   ├── dashboard.html      # Main student dashboard
-│   ├── seat.html           # Seat layout view
-│   └── admin.html          # Admin panel
-│
-├── static/
-│   ├── style.css           # Stylesheet
-│   └── script.js           # JavaScript
-│
-└── instance/
-    └── resource.db         # SQLite database (auto-created)
+
  Database Schema
 The system uses three tables:
 
-Table	Purpose	Key Fields
-Resource	Current seat counts	id, name, available, total, last_updated
-ResourceHistory	Change log	id, resource_id, old_count, new_count, event_type, changed_at
-EBook	E-resource list	id, title, author, category, link, is_open_access
+| Table	|Purpose |	Key Fields |
+| Resource	| Current seat counts |	id, name, available, total, last_updated |
+| ResourceHistory |	Change | log	id, resource_id, old_count, new_count, event_type, changed_at |
+| EBook |	E-resource list |	id, title, author, category, link, is_open_access |
  Installation
 1. Clone or download the project
 text
@@ -146,6 +128,15 @@ Admin can override → Manual updates via admin panel if needed
    │ - History    │        │ ENTRY/EXIT     │
    │ - EBooks     │        │ events         │
    └──────────────┘        └────────────────┘
+License
+This project is open-source and free to use for educational purposes.
+
+ Author
+Emmanuel Kalongo Dena
+Dedan Kimathi University of Technology
+Bachelor of Science in Information Technology (4th Year)
+
+   
  License
 This project is open-source and free to use for educational purposes.
 
