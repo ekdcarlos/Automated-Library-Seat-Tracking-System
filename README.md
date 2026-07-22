@@ -23,6 +23,7 @@ Frontend	HTML, CSS, JavaScript
 Charts	Chart.js
 HTTP Client	Requests library (for simulation)
 Project Structure
+text
 DeKUT_Library_Tracker/
 │
 ├── app.py                  # Flask application
