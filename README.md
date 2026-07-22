@@ -88,55 +88,7 @@ Flask processes events → Updates seat counts, logs history
 Dashboard auto-refreshes → Students see updated counts every 2 seconds
 
 Admin can override → Manual updates via admin panel if needed
-
- System Architecture Diagram
-
-┌─────────────────────────────────────────────────────────────────────┐
-│                    DeKUT AUTOMATED LIBRARY SEAT TRACKING            │
-└─────────────────────────────────────────────────────────────────────┘
-
-   ┌──────────────┐
-   │   STUDENT    │
-   │  (On Phone)  │
-   └──────┬───────┘
-          │
-          ▼
-   ┌──────────────────────────────────────┐
-   │       STUDENT DASHBOARD             │
-   │   - Live seat counts                │
-   │   - Color-coded status              │
-   │   - E-book list                     │
-   │   - Peak hour predictions           │
-   └─────────────────┬────────────────────┘
-                     │
-                     ▼
-   ┌──────────────────────────────────────┐
-   │        FLASK BACKEND                │
-   │   - Handles requests                │
-   │   - Processes sensor events         │
-   │   - Runs ML predictions             │
-   └─────────────────┬────────────────────┘
-                     │
-       ┌─────────────┴─────────────┐
-       │                           │
-       ▼                           ▼
-   ┌──────────────┐        ┌────────────────┐
-   │   DATABASE   │        │   SIMULATION   │
-   │   (SQLite)   │        │     SCRIPT     │
-   │              │        │                │
-   │ - Resource   │        │ Generates      │
-   │ - History    │        │ ENTRY/EXIT     │
-   │ - EBooks     │        │ events         │
-   └──────────────┘        └────────────────┘
-License
-This project is open-source and free to use for educational purposes.
-
- Author
-Emmanuel Kalongo Dena
-Dedan Kimathi University of Technology
-Bachelor of Science in Information Technology (4th Year)
-
-   
+  
  License
 This project is open-source and free to use for educational purposes.
 
